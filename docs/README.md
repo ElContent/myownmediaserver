@@ -8,8 +8,14 @@ Esta formación se enfoca a que el usuario tenga un primer contacto con la gesti
 
 PDTE.
 
-## Descargando Debian 12
+## Creando la máquina virtual
+
+### Descarga de Debian 12
 
 Para la realización de la formación se utilizará una máquina virtual con Debian 12. Para ello, se puede descargar la imagen de la [página oficial de Debian](https://www.debian.org/distrib/netinst). Se recomienda descargar la versión de 64 bits **sin** entorno gráfico.
+
+### Creación de la máquina virtual - Linux y Windows (VirtualBox)
+
+
 
 
