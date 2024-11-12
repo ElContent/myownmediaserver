@@ -1,3 +1,4 @@
+
 # My Own Media Server
 
 Este repositorio surge de la petición de la [RITSI](https://ritsi.org/) sobre la realización de una formación sobre servidores y su gestión. A lo largo de este repositorio se verá cómo conectar un disco duro en red a nuestro servidor y cómo crear un servidor multimedia con Jellyfin.
@@ -14,8 +15,15 @@ PDTE.
 
 Para la realización de la formación se utilizará una máquina virtual con Debian 12. Para ello, se puede descargar la imagen de la [página oficial de Debian](https://www.debian.org/distrib/netinst). Se recomienda descargar la versión de 64 bits **sin** entorno gráfico.
 
-### Creación de la máquina virtual - Linux y Windows (VirtualBox)
+### Características de la máquina virtual
 
+Para la realización de la formación se recomienda tener una máquina virtual con las siguientes características:
+- 4 GB de RAM
+- 2 núcleos de CPU
+- 20 GB de almacenamiento
+- Un disco duro adicional de 20 GB
+
+### Creación de la máquina virtual - Linux y Windows (VirtualBox)
 
 
 
