@@ -1,0 +1,15 @@
+{
+  "name": "myownmediaservice",
+  "version": "1.0.0",
+  "description": "My own media service",
+  "scripts": {
+    "docs": "docsify serve docs"
+  },
+  "author": {
+    "name": "Jordi Sellés Enríquez"
+  },
+  "dependencies": {
+    "docsify-cli": "^4.4.4",
+    "myownmediaservice": "file:"
+  }
+}
