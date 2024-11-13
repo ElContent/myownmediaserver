@@ -1,6 +1,6 @@
 # My Own Media Server
 
-[![deploy-docs](https://github.com/Jordilavila/myownmediaserver/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/Jordilavila/myownmediaserver/actions/workflows/deploy-docs.yml)
+[![pages-build-deployment](https://github.com/Jordilavila/myownmediaserver/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Jordilavila/myownmediaserver/actions/workflows/pages/pages-build-deployment)
 
 Este repositorio surge a razón de una petición que me hace la [RITSI](https://ritsi.org/) sobre la realizar una formación sobre servidores y su gestión. A lo largo de este repositorio se verá cómo conectar un disco duro en red a nuestro servidor y cómo crear un servidor multimedia con Jellyfin.
 
