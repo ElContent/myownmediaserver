@@ -1,4 +1,4 @@
-# Creando la máquina virtual
+# Creación y configuración de la máquina virtual
 
 ## Descarga de Debian 12
 
@@ -12,7 +12,7 @@ Para la realización de la formación se recomienda tener una máquina virtual c
 - 20 GB de almacenamiento
 - Un disco duro adicional de 20 GB
 
-## Creación y configuración de la máquina virtual - Linux y Windows (VirtualBox)
+## Creación máquina virtual - Linux y Windows (VirtualBox)
 
 Es muy importante que una vez tengamos instalado VirtualBox, instalemos las Guest Additions. Las podemos encontrar en la página oficial de VirtualBox, en la sección de descargas con el nombre de "VirtualBox Guest Additions" o "VirtualBox Extension Pack".
 
@@ -47,3 +47,13 @@ Veremos una pantalla como esta:
 ![Configuración de la red](vbx_09.png)
 
 Una vez llegados a este punto, podemos dar clic sobre el botón aceptar para que se guarden nuestros cambios.
+
+## Insertando el ISO de Debian 12
+
+Ahora que ya hemos configurado nuestra máquina virtual, vamos a insertar la imagen ISO de Debian 12. Para ello, le daremos clic derecho a nuestra máquina virtual y seleccionaremos la opción de *Configuración*.
+
+En la ventana que se nos abre, vamos a la sección de *Almacenamiento* y seleccionamos el icono del disco que está en la parte derecha de la ventana. Se nos abrirá un menú desplegable, en el cual seleccionaremos la opción de *Seleccionar un archivo de disco óptico virtual*. Buscamos la imagen ISO de Debian 12 y le damos clic en *Abrir*.
+
+![Insertar ISO](vbx_10.png)
+
+Una vez hecho esto, le daremos clic en *Aceptar* para que se guarden los cambios. Ahora ya podemos iniciar nuestra máquina virtual y comenzar con la [instalación de Debian 12](instalacion_so.md).

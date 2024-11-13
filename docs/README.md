@@ -16,11 +16,4 @@ El fundador del proyecto Debian fue Ian Murdock, quien escribió el manifiesto d
 ¿Y de donde viene el nombre? Pues su nombre viene de la combinación del nombre de quien era su pareja y futura esposa, Deborah, con el suyo, Ian, formando el acrónimo Debian.
 Finalmente, la primera versión 1.x de Debian fue lanzada en 1996.
 
-Una vez ya conocemos las curiosidades del sistema operativo que tenemos entre manos, ¡vamos al lío!
-
-## Índice
-
-PDTE.
-
-
-
+Una vez ya conocemos las curiosidades del sistema operativo que tenemos entre manos, ¡vamos al lío! ¡Vamos a [crear nuestra máquina virtual](creando_la_vm.md)! 🚀
