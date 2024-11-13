@@ -1,5 +1,6 @@
-
 # My Own Media Server
+
+[![deploy-docs](https://github.com/Jordilavila/myownmediaserver/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/Jordilavila/myownmediaserver/actions/workflows/deploy-docs.yml)
 
 Este repositorio surge de la petición de la [RITSI](https://ritsi.org/) sobre la realización de una formación sobre servidores y su gestión. A lo largo de este repositorio se verá cómo conectar un disco duro en red a nuestro servidor y cómo crear un servidor multimedia con Jellyfin.
 
@@ -16,29 +17,52 @@ El fundador del proyecto Debian fue Ian Murdock, quien escribió el manifiesto d
 ¿Y de donde viene el nombre? Pues su nombre viene de la combinación del nombre de quien era su pareja y futura esposa, Deborah, con el suyo, Ian, formando el acrónimo Debian.
 Finalmente, la primera versión 1.x de Debian fue lanzada en 1996.
 
-Una vez ya conocemos las curiosidades del sistema operativo que tenemos entre manos, ¡vamos al lío!
+## Estructura
 
-## Índice
+La estructura de este repositorio es la siguiente:
 
-PDTE.
+```
+.
+├── .github
+│   ├── workflows
+│   │   ├── auto-prerelease.yml
+│   │   ├── auto-release.yml
+│   │   ├── deploy-docs.yml
+│   │   └── telegram-notify-issues.yml
+│   ├── ISSUE_TEMPLATE
+│   │   ├── bug_report.yml
+│   │   ├── config.yml
+│   │   ├── feature-request.yml
+│   │   └── question.yml
+│
+├── docs
+│   ├── _sidebar.md
+│   ├── Desarrollo.md
+│   ├── .nojekyll
+│   └── README.md
+│
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+```
 
-## Creando la máquina virtual
+## Documentación
 
-### Descarga de Debian 12
+La documentación de este proyecto se encuentra en la carpeta `docs`. Para su redacción, se ha utilizado [Docsify](https://docsify.js.org/) con un tema personalizado.
 
-Para la realización de la formación se utilizará una máquina virtual con Debian 12. Para ello, se puede descargar la imagen de la [página oficial de Debian](https://www.debian.org/distrib/netinst). Se recomienda descargar la versión de 64 bits **sin** entorno gráfico.
+Para visualizar la documentación en local, es necesario ejecutar el siguiente comando:
 
-### Características de la máquina virtual
+```bash
+npm run docs
+```
 
-Para la realización de la formación se recomienda tener una máquina virtual con las siguientes características:
-- 4 GB de RAM
-- 2 núcleos de CPU
-- 20 GB de almacenamiento
-- Un disco duro adicional de 20 GB
+Si no tienes instalado Docsify en tu máquina, puedes hacerlo mediante el siguiente comando:
 
-### Creación de la máquina virtual - Linux y Windows (VirtualBox)
+```bash
+npm i docsify-cli -g
+```
 
-Es muy importante que una vez tengamos instalado VirtualBox, instalemos las Guest Additions. Las podemos encontrar en la página oficial de VirtualBox, en la sección de descargas con el nombre de "VirtualBox Guest Additions" o "VirtualBox Extension Pack".
 
-Una vez tenemos todo instalado, vamos al lío con la creación de la máquina virtual. 
 

@@ -1,4 +1,3 @@
-
 # My Own Media Server
 
 Este repositorio surge de la petición de la [RITSI](https://ritsi.org/) sobre la realización de una formación sobre servidores y su gestión. A lo largo de este repositorio se verá cómo conectar un disco duro en red a nuestro servidor y cómo crear un servidor multimedia con Jellyfin.
