@@ -27,6 +27,8 @@ Para crear un disco duro virtual, vamos a seguir los siguientes pasos:
 
 Tras seguir estos pasos, ya tendremos creado nuestro disco duro virtual.
 
+**OJO:** VirtualBox tardará un rato en crear el disco duro virtual. No te preocupes si tarda un poco.
+
 ## Particionado y rutas
 
 Suponiendo que hemos conectado el disco duro, ejecutamos el comando ```sudo blkid``` para ver la información de las particiones y nos anotamos el UUID de la partición del disco duro que vamos a usar en la red. En mi caso es SDA1.
@@ -41,7 +43,18 @@ sudo apt install ntfs-3g -y
 sudo apt install exfat-utils -y
 ```
 
-Tras las instalaciones y anotaciones pertinentes, podemos comprobar las particiones mediante el comando ```sudo fdisk -l```.
+Tras las instalaciones y anotaciones pertinentes, podemos comprobar las particiones mediante el comando ```sudo fdisk -l```. Como el disco duro que vamos a montar no tienen nada, no aparecerán particiones. Tenemos que crear una partición en el disco duro. Para ello, ejecutamos el comando ```sudo fdisk /dev/sda``` y seguimos los siguientes pasos:
+
+1. Escribimos ```n``` para crear una nueva partición.
+2. Seleccionamos la partición primaria con ```p```.
+3. Seleccionamos el número de partición con ```1```.
+4. Dejamos el primer sector por defecto.
+5. Dejamos el último sector por defecto.
+6. Escribimos ```w``` para escribir los cambios.
+
+Tras crear la partición, formateamos el disco duro con el comando ```sudo mkfs.ntfs /dev/sda1``` o ```sudo mkfs.exfat /dev/sda1``` en función del formato que hayamos elegido.
+
+## Montaje del disco duro
 
 Un paso importante va a ser el siguiente. Tenemos que crear la carpeta donde montaremos el disco duro y procederemos a montarlo:
 
@@ -106,7 +119,7 @@ Tras la instalación de SAMBA tendremos que añadir la configuración pertinente
   public = Yes
 ```
 
-Tras configurar el directorio a compartir, tendremos que cambiar la contraseña de SAMBA: ```sudo smbpasswd -a jamesbond```
+Tras configurar el directorio a compartir, tendremos que cambiar la contraseña de SAMBA: ```sudo smbpasswd -a julioiglesias```
 
 Tras final la configuración de SAMBA en nuestra máquina, reiniciamos el servicio:
 
@@ -116,4 +129,6 @@ sudo systemctl restart smbd
 
 ## Acceso al disco duro en red
 
-Para acceder al disco duro en red, abrimos el explorador de archivos de nuestra máquina host y escribimos en la barra de direcciones ```\\IP_VM``` y nos pedirá las credenciales de acceso. Introducimos el usuario y la contraseña que hemos configurado en el paso anterior y ya podremos acceder al disco duro en red.
+Para acceder al disco duro en red, abrimos el explorador de archivos de nuestra máquina host y escribimos en la barra de direcciones ```\\IP_VM\hddred``` y nos pedirá las credenciales de acceso. Introducimos el usuario y la contraseña que hemos configurado en el paso anterior y ya podremos acceder al disco duro.
+
+¡Enhorabuena! Llegados a este punto, tenemos la parte de montaje de disco duro en red completada y, con ello, el grueso de la formación. 
